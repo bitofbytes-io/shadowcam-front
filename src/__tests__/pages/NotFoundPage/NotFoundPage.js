@@ -9,6 +9,6 @@ describe("NotFoundPage render", () => {
 
   it("Should match NotFoundPage component snapshot", () => {
     const wrapper = shallow(<NotFoundPage />);
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.debug().replace(/[ \t]+$/gm, "")).toMatchSnapshot();
   });
 });

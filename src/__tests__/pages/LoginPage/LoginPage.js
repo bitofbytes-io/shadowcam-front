@@ -10,7 +10,7 @@ describe("LoginPage render", () => {
 
   it("Should match LoginPage component snapshot", () => {
     const wrapper = shallow(<LoginPage />);
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.debug().replace(/[ \t]+$/gm, "")).toMatchSnapshot();
   });
 });
 

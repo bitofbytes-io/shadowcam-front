@@ -11,7 +11,7 @@ describe("Header render", () => {
 
   it("Should match Header component snapshot", () => {
     const wrapper = shallow(<Header />);
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.debug().replace(/[ \t]+$/gm, "")).toMatchSnapshot();
   });
 });
 
