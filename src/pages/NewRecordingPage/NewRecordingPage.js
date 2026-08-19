@@ -8,6 +8,7 @@ import Layout from "../../components/Layout/Layout";
 import RestModal from "../../components/RestModal/RestModal";
 import { formatTimeFromSeconds } from "../../utils/utils";
 
+import "@tensorflow/tfjs";
 import * as posenet from "@tensorflow-models/posenet";
 import { processPose } from "../../utils/poseUtils";
 
@@ -288,7 +289,24 @@ export class NewRecordingPage extends Component {
   // open pose logic for processing a frame from the
   // video element
   processPoses = async () => {
-    const net = await posenet.load(0.75);
+    const toLegacyScaledResolution = dimension => {
+      const scaledResolution =
+        dimension * this.state.poseNet.imageScaleFactor - 1;
+      return (
+        scaledResolution -
+        (scaledResolution % this.state.poseNet.outputStride) +
+        1
+      );
+    };
+    const net = await posenet.load({
+      architecture: "MobileNetV1",
+      inputResolution: {
+        width: toLegacyScaledResolution(this.state.width),
+        height: toLegacyScaledResolution(this.state.height)
+      },
+      multiplier: 0.75,
+      outputStride: this.state.poseNet.outputStride
+    });
 
     // keep the state from updating constantly once it finds
     // a correct punch pose
@@ -307,12 +325,9 @@ export class NewRecordingPage extends Component {
       // startTime = +new Date()
       let pose;
       if (this.state.recorderSetup) {
-        pose = await net.estimateSinglePose(
-          this.videoRef.current,
-          this.state.poseNet.imageScaleFactor,
-          this.state.poseNet.flipHorizontal,
-          this.state.poseNet.outputStride
-        );
+        pose = await net.estimateSinglePose(this.videoRef.current, {
+          flipHorizontal: this.state.poseNet.flipHorizontal
+        });
         const punchType = processPose(pose);
         if (punchType && punchType !== "noPunch") {
           debounceUpdateState(punchType);
@@ -326,7 +341,7 @@ export class NewRecordingPage extends Component {
       // console.log(+new Date() - startTime);
     };
 
-    poseDetectionFrame();
+    return poseDetectionFrame();
   };
 
   // play a recorded video on video element
