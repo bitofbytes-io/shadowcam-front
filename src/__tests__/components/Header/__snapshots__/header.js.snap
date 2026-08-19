@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Header render Should match Header component snapshot 1`] = `
 "<Navbar className=\\"headerContainer\\" color=\\"dark\\" dark={true} expand=\\"md\\" tag=\\"nav\\">
@@ -9,7 +9,7 @@ exports[`Header render Should match Header component snapshot 1`] = `
         ShadowCam
       </span>
     </Link>
-    <NavbarToggler onClick={[Function (anonymous)]} tag=\\"button\\" type=\\"button\\" />
+    <NavbarToggler onClick={[Function: toggle]} tag=\\"button\\" type=\\"button\\" />
     <Collapse isOpen={false} navbar={true} in={false} mountOnEnter={false} unmountOnExit={false} appear={false} enter={true} exit={true} onEnter={[Function: noop]} onEntering={[Function: noop]} onEntered={[Function: noop]} onExit={[Function: noop]} onExiting={[Function: noop]} onExited={[Function: noop]} tag=\\"div\\" timeout={350}>
       <Nav className=\\"menuItems\\" navbar={true} tag=\\"ul\\" vertical={false}>
         <NavItem className=\\"menuItem\\" tag=\\"li\\" />

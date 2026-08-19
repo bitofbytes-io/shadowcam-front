@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`NewWorkoutPage render Should match NewWorkoutPage component snapshot 1`] = `
 "<Layout>
@@ -8,7 +8,7 @@ exports[`NewWorkoutPage render Should match NewWorkoutPage component snapshot 1`
     </Row>
     <Row tag=\\"div\\">
       <Col tag=\\"div\\" widths={{...}}>
-        <Form onSubmit={[Function (anonymous)]} className=\\"form\\" tag=\\"form\\">
+        <Form onSubmit={[Function: handleSubmit]} className=\\"form\\" tag=\\"form\\">
           <div className=\\"timeCategory\\">
             Total Workout Time:
 
@@ -22,13 +22,13 @@ exports[`NewWorkoutPage render Should match NewWorkoutPage component snapshot 1`
               Minutes
             </Label>
             <Col sm=\\"4\\" md=\\"3\\" tag=\\"div\\" widths={{...}}>
-              <Input type=\\"number\\" min=\\"0\\" id=\\"restTimeMin\\" value={0} onChange={[Function (anonymous)]} />
+              <Input type=\\"number\\" min=\\"0\\" id=\\"restTimeMin\\" value={0} onChange={[Function: handleInputChange]} />
             </Col>
             <Label sm=\\"2\\" for=\\"restTimeSec\\" tag=\\"label\\" widths={{...}}>
               Seconds
             </Label>
             <Col sm=\\"4\\" md=\\"3\\" tag=\\"div\\" widths={{...}}>
-              <Input type=\\"number\\" min=\\"0\\" max=\\"59\\" id=\\"restTimeSec\\" value={0} onChange={[Function (anonymous)]} />
+              <Input type=\\"number\\" min=\\"0\\" max=\\"59\\" id=\\"restTimeSec\\" value={0} onChange={[Function: handleInputChange]} />
             </Col>
           </FormGroup>
           <div className=\\"timeCategory\\">
@@ -39,13 +39,13 @@ exports[`NewWorkoutPage render Should match NewWorkoutPage component snapshot 1`
               Minutes
             </Label>
             <Col sm=\\"4\\" md=\\"3\\" tag=\\"div\\" widths={{...}}>
-              <Input type=\\"number\\" min=\\"0\\" id=\\"intervalTimeMin\\" value={0} onChange={[Function (anonymous)]} />
+              <Input type=\\"number\\" min=\\"0\\" id=\\"intervalTimeMin\\" value={0} onChange={[Function: handleInputChange]} />
             </Col>
             <Label sm=\\"2\\" for=\\"intervalTimeSec\\" tag=\\"label\\" widths={{...}}>
               Seconds
             </Label>
             <Col sm=\\"4\\" md=\\"3\\" tag=\\"div\\" widths={{...}}>
-              <Input type=\\"number\\" min=\\"0\\" max=\\"59\\" id=\\"intervalTimeSec\\" value={0} onChange={[Function (anonymous)]} />
+              <Input type=\\"number\\" min=\\"0\\" max=\\"59\\" id=\\"intervalTimeSec\\" value={0} onChange={[Function: handleInputChange]} />
             </Col>
           </FormGroup>
           <FormGroup row={true} className=\\"spacer\\" tag=\\"div\\">
@@ -53,7 +53,7 @@ exports[`NewWorkoutPage render Should match NewWorkoutPage component snapshot 1`
               Number of Intervals
             </Label>
             <Col sm=\\"4\\" tag=\\"div\\" widths={{...}}>
-              <Input type=\\"number\\" min=\\"1\\" id=\\"numberInterval\\" value={1} onChange={[Function (anonymous)]} placeholder=\\"Number of Intervals\\" required={true} />
+              <Input type=\\"number\\" min=\\"1\\" id=\\"numberInterval\\" value={1} onChange={[Function: handleInputChange]} placeholder=\\"Number of Intervals\\" required={true} />
             </Col>
           </FormGroup>
           <Row className=\\"spacer\\" tag=\\"div\\">

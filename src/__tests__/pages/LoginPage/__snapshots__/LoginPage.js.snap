@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`LoginPage render Should match LoginPage component snapshot 1`] = `
 "<Layout>
@@ -15,13 +15,13 @@ exports[`LoginPage render Should match LoginPage component snapshot 1`] = `
         <p>
           Sign in with your email and password.
         </p>
-        <Form onSubmit={[Function (anonymous)]} tag=\\"form\\">
+        <Form onSubmit={[Function: handleSubmit]} tag=\\"form\\">
           <FormGroup row={true} tag=\\"div\\">
             <Label sm=\\"3\\" lg=\\"2\\" for=\\"email\\" tag=\\"label\\" widths={{...}}>
               Email
             </Label>
             <Col sm=\\"6\\" tag=\\"div\\" widths={{...}}>
-              <Input type=\\"email\\" required={true} id=\\"email\\" value=\\"\\" onChange={[Function (anonymous)]} placeholder=\\"Email address\\" className=\\"\\" />
+              <Input type=\\"email\\" required={true} id=\\"email\\" value=\\"\\" onChange={[Function: handleChange]} placeholder=\\"Email address\\" className=\\"\\" />
             </Col>
           </FormGroup>
           <FormGroup row={true} className=\\"spacer\\" tag=\\"div\\">
@@ -29,7 +29,7 @@ exports[`LoginPage render Should match LoginPage component snapshot 1`] = `
               Password
             </Label>
             <Col sm=\\"6\\" tag=\\"div\\" widths={{...}}>
-              <Input type=\\"password\\" minLength=\\"8\\" required={true} id=\\"password\\" value=\\"\\" onChange={[Function (anonymous)]} placeholder=\\"Password\\" className=\\"\\" />
+              <Input type=\\"password\\" minLength=\\"8\\" required={true} id=\\"password\\" value=\\"\\" onChange={[Function: handleChange]} placeholder=\\"Password\\" className=\\"\\" />
             </Col>
           </FormGroup>
           <FormGroup className=\\"spacer\\" tag=\\"div\\">
