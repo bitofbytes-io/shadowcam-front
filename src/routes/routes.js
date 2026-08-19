@@ -10,8 +10,17 @@ import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import PastWorkoutsPage from "../pages/PastWorkoutsPage/PastWorkoutsPage";
 import ProfilePage from "../pages/ProfilePage/ProfilePage";
 
+export const getRouterBasename = publicUrl => {
+  if (!publicUrl) {
+    return undefined;
+  }
+
+  const pathname = new URL(publicUrl, "http://router.local").pathname;
+  return pathname.replace(/\/+$/, "") || undefined;
+};
+
 export const Routes = props => (
-  <BrowserRouter basename={process.env.PUBLIC_URL || undefined}>
+  <BrowserRouter basename={getRouterBasename(process.env.PUBLIC_URL)}>
     <Switch>
       <Route exact path="/" component={LandingPage} />
       <Route
