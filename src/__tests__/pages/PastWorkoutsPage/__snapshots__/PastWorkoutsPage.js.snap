@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`PastWorkoutsPage render Should match PastWorkoutsPage component snapshot 1`] = `
 "<Layout>

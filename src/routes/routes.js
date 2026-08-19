@@ -10,8 +10,8 @@ import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import PastWorkoutsPage from "../pages/PastWorkoutsPage/PastWorkoutsPage";
 import ProfilePage from "../pages/ProfilePage/ProfilePage";
 
-const Routes = props => (
-  <BrowserRouter>
+export const Routes = props => (
+  <BrowserRouter basename={process.env.PUBLIC_URL || undefined}>
     <Switch>
       <Route exact path="/" component={LandingPage} />
       <Route

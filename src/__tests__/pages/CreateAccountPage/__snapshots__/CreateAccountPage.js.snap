@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`CreateAccountPage render Should match CreateAccountPage component snapshot 1`] = `
 "<Layout>
@@ -20,13 +20,13 @@ exports[`CreateAccountPage render Should match CreateAccountPage component snaps
     <Row tag=\\"div\\">
       <Col tag=\\"div\\" widths={{...}} />
     </Row>
-    <Form onSubmit={[Function (anonymous)]} className=\\"createForm\\" tag=\\"form\\">
+    <Form onSubmit={[Function: handleSubmit]} className=\\"createForm\\" tag=\\"form\\">
       <FormGroup row={true} className=\\"spacer\\" tag=\\"div\\">
         <Label sm=\\"4\\" lg=\\"3\\" xl=\\"2\\" for=\\"email\\" tag=\\"label\\" widths={{...}}>
           Email
         </Label>
         <Col sm=\\"7\\" lg=\\"5\\" tag=\\"div\\" widths={{...}}>
-          <Input type=\\"email\\" required={true} id=\\"email\\" value=\\"\\" onChange={[Function (anonymous)]} placeholder=\\"Email address\\" spellCheck=\\"false\\" className=\\"\\" />
+          <Input type=\\"email\\" required={true} id=\\"email\\" value=\\"\\" onChange={[Function: handleChange]} placeholder=\\"Email address\\" spellCheck=\\"false\\" className=\\"\\" />
         </Col>
       </FormGroup>
       <FormGroup row={true} className=\\"spacer\\" tag=\\"div\\">
@@ -34,7 +34,7 @@ exports[`CreateAccountPage render Should match CreateAccountPage component snaps
           Password
         </Label>
         <Col sm=\\"7\\" lg=\\"5\\" tag=\\"div\\" widths={{...}}>
-          <Input type=\\"password\\" minLength=\\"8\\" required={true} id=\\"password\\" value=\\"\\" onChange={[Function (anonymous)]} placeholder=\\"Password\\" className=\\"\\" />
+          <Input type=\\"password\\" minLength=\\"8\\" required={true} id=\\"password\\" value=\\"\\" onChange={[Function: handleChange]} placeholder=\\"Password\\" className=\\"\\" />
           <div className=\\"passwordHelpers\\">
             <p>
               Minimum is 8 characters
@@ -56,7 +56,7 @@ exports[`CreateAccountPage render Should match CreateAccountPage component snaps
           Confirm Password
         </Label>
         <Col sm=\\"7\\" lg=\\"5\\" tag=\\"div\\" widths={{...}}>
-          <Input type=\\"password\\" minLength=\\"8\\" required={true} id=\\"confirmPassword\\" value=\\"\\" onChange={[Function (anonymous)]} placeholder=\\"Confirm Password\\" className=\\"\\" />
+          <Input type=\\"password\\" minLength=\\"8\\" required={true} id=\\"confirmPassword\\" value=\\"\\" onChange={[Function: handleChange]} placeholder=\\"Confirm Password\\" className=\\"\\" />
         </Col>
       </FormGroup>
       <FormGroup row={true} className=\\"spacer\\" tag=\\"div\\">
@@ -64,7 +64,7 @@ exports[`CreateAccountPage render Should match CreateAccountPage component snaps
           First Name
         </Label>
         <Col sm=\\"5\\" md=\\"3\\" tag=\\"div\\" widths={{...}}>
-          <Input type=\\"text\\" id=\\"firstName\\" maxLength=\\"50\\" value=\\"\\" onChange={[Function (anonymous)]} className=\\"\\" />
+          <Input type=\\"text\\" id=\\"firstName\\" maxLength=\\"50\\" value=\\"\\" onChange={[Function: handleChange]} className=\\"\\" />
         </Col>
       </FormGroup>
       <FormGroup row={true} className=\\"spacer\\" tag=\\"div\\">
@@ -72,7 +72,7 @@ exports[`CreateAccountPage render Should match CreateAccountPage component snaps
           Last Name
         </Label>
         <Col sm=\\"5\\" md=\\"3\\" tag=\\"div\\" widths={{...}}>
-          <Input type=\\"text\\" id=\\"lastName\\" maxLength=\\"50\\" value=\\"\\" onChange={[Function (anonymous)]} className=\\"\\" />
+          <Input type=\\"text\\" id=\\"lastName\\" maxLength=\\"50\\" value=\\"\\" onChange={[Function: handleChange]} className=\\"\\" />
         </Col>
       </FormGroup>
       <FormGroup row={true} className=\\"spacer\\" tag=\\"div\\">
@@ -80,7 +80,7 @@ exports[`CreateAccountPage render Should match CreateAccountPage component snaps
           Birthdate
         </Label>
         <Col sm=\\"5\\" md=\\"3\\" tag=\\"div\\" widths={{...}}>
-          <Input type=\\"date\\" id=\\"birthdate\\" max=\\"2007-0101\\" min=\\"1900-01-01\\" value=\\"1984-01-01\\" onChange={[Function (anonymous)]} className=\\"\\" />
+          <Input type=\\"date\\" id=\\"birthdate\\" max=\\"2007-0101\\" min=\\"1900-01-01\\" value=\\"1984-01-01\\" onChange={[Function: handleChange]} className=\\"\\" />
         </Col>
       </FormGroup>
       <FormGroup row={true} tag=\\"div\\">
@@ -89,13 +89,13 @@ exports[`CreateAccountPage render Should match CreateAccountPage component snaps
         </Col>
         <FormGroup check={true} tag=\\"div\\">
           <Label sm=\\"4\\" check={true} tag=\\"label\\" widths={{...}}>
-            <Input type=\\"radio\\" name=\\"gender\\" value=\\"male\\" onChange={[Function (anonymous)]} checked=\\"checked\\" />
+            <Input type=\\"radio\\" name=\\"gender\\" value=\\"male\\" onChange={[Function: handleChecked]} checked=\\"checked\\" />
             Male
           </Label>
         </FormGroup>
         <FormGroup check={true} tag=\\"div\\">
           <Label sm=\\"4\\" check={true} tag=\\"label\\" widths={{...}}>
-            <Input type=\\"radio\\" name=\\"gender\\" value=\\"female\\" onChange={[Function (anonymous)]} checked=\\"\\" />
+            <Input type=\\"radio\\" name=\\"gender\\" value=\\"female\\" onChange={[Function: handleChecked]} checked=\\"\\" />
 
             Female
           </Label>
@@ -106,7 +106,7 @@ exports[`CreateAccountPage render Should match CreateAccountPage component snaps
           Height (inches)
         </Label>
         <Col sm=\\"5\\" md=\\"3\\" tag=\\"div\\" widths={{...}}>
-          <Input type=\\"number\\" min={40} max={100} id=\\"height\\" value={65} onChange={[Function (anonymous)]} placeholder=\\"Height in inches\\" className=\\"\\" />
+          <Input type=\\"number\\" min={40} max={100} id=\\"height\\" value={65} onChange={[Function: handleChange]} placeholder=\\"Height in inches\\" className=\\"\\" />
         </Col>
       </FormGroup>
       <FormGroup row={true} className=\\"spacer\\" tag=\\"div\\">
@@ -114,12 +114,12 @@ exports[`CreateAccountPage render Should match CreateAccountPage component snaps
           Weight (lbs)
         </Label>
         <Col sm=\\"5\\" md=\\"3\\" tag=\\"div\\" widths={{...}}>
-          <Input type=\\"number\\" min={40} max={400} id=\\"weight\\" value={160} onChange={[Function (anonymous)]} placeholder=\\"Weight in pounds\\" className=\\"\\" />
+          <Input type=\\"number\\" min={40} max={400} id=\\"weight\\" value={160} onChange={[Function: handleChange]} placeholder=\\"Weight in pounds\\" className=\\"\\" />
         </Col>
       </FormGroup>
       <Row className=\\"spacer\\" tag=\\"div\\">
         <Col tag=\\"div\\" widths={{...}}>
-          <Button className=\\"createButton\\" onClick={[Function (anonymous)]} color=\\"secondary\\" tag=\\"button\\">
+          <Button className=\\"createButton\\" onClick={[Function: handleClear]} color=\\"secondary\\" tag=\\"button\\">
             Clear
           </Button>
           <Button className=\\"createButton\\" color=\\"secondary\\" tag=\\"button\\">
