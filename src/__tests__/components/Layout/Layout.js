@@ -9,6 +9,6 @@ describe("Layout render", () => {
 
   it("Should match Layout component snapshot", () => {
     const wrapper = shallow(<Layout />);
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.debug().replace(/[ \t]+$/gm, "")).toMatchSnapshot();
   });
 });

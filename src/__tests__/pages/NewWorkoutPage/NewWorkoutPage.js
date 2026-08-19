@@ -10,7 +10,7 @@ describe("NewWorkoutPage render", () => {
 
   it("Should match NewWorkoutPage component snapshot", () => {
     const wrapper = shallow(<NewWorkoutPage />);
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.debug().replace(/[ \t]+$/gm, "")).toMatchSnapshot();
   });
 });
 
@@ -164,13 +164,18 @@ describe("Should return the correct total time", () => {
 });
 
 describe("Tests for form submission", () => {
-  it("Should update app state with workout data", () => {
+  it("Should update app state with workout data", async () => {
     const event = { preventDefault: function() {} };
+    const history = { push: jest.fn() };
     const reduxSpy = jest.fn(() => {
       return Promise.resolve("ok");
     });
     const wrapper = shallow(
-      <NewWorkoutPage tryStartWorkout={reduxSpy} token={"token"} />
+      <NewWorkoutPage
+        history={history}
+        tryStartWorkout={reduxSpy}
+        token={"token"}
+      />
     );
     const instance = wrapper.instance();
     const spy = jest.spyOn(instance, "handleSubmit");
@@ -195,6 +200,8 @@ describe("Tests for form submission", () => {
       },
       "token"
     );
+    await Promise.resolve();
+    expect(history.push).toHaveBeenCalledWith("/workouts/newRecording");
   });
 
   it("should set state of error message if total workout time is 0", () => {

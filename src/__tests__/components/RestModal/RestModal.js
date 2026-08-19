@@ -10,7 +10,7 @@ describe("RestModal render", () => {
 
   it("Should match RestModal component snapshot", () => {
     const wrapper = shallow(<RestModal />);
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.debug().replace(/[ \t]+$/gm, "")).toMatchSnapshot();
   });
 });
 

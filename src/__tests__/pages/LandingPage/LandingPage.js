@@ -9,6 +9,6 @@ describe("LandingPage render", () => {
 
   it("Should match LandingPage component snapshot", () => {
     const wrapper = shallow(<LandingPage />);
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.debug().replace(/[ \t]+$/gm, "")).toMatchSnapshot();
   });
 });

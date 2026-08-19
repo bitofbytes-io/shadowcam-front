@@ -10,6 +10,6 @@ describe("PastWorkoutsPage render", () => {
 
   it("Should match PastWorkoutsPage component snapshot", () => {
     const wrapper = shallow(<PastWorkoutsPage loading={()=>{}} />);
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.debug().replace(/[ \t]+$/gm, "")).toMatchSnapshot();
   });
 });

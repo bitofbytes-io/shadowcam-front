@@ -11,7 +11,7 @@ describe("CreateAccountPage render", () => {
 
   it("Should match CreateAccountPage component snapshot", () => {
     const wrapper = shallow(<CreateAccountPage />);
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.debug().replace(/[ \t]+$/gm, "")).toMatchSnapshot();
   });
 });
 

@@ -37,7 +37,7 @@ describe("NewRecordingPage render", () => {
     const spy = jest.spyOn(NewRecordingPage.prototype, "componentDidMount");
     spy.mockImplementation(() => {});
     const wrapper = shallow(<NewRecordingPage />);
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.debug().replace(/[ \t]+$/gm, "")).toMatchSnapshot();
   });
 });
 
