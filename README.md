@@ -13,8 +13,10 @@ determine user's poses to record user's boxing workouts.  It requires the [backe
 
 ## Instructions
 
-1. Install NPM Packages using ``` npm install ```
-2. Run with ``` npm start ```
+1. Use Node.js `^20.19.0` or `>=22.12.0` with npm.
+2. Install the locked NPM packages using ``` npm ci ```.
+3. Run with ``` npm start ```.
+4. Create or preview a production build with ``` npm run build ``` or ``` npm run preview ```.
 
 ShadowCam backend application is required to be running for the 
 application to run successfully.  It uses the backend API application
@@ -25,11 +27,11 @@ workouts.
 All needed NPM packages are included in the package.json file. 
 
 ## Prerequisites
-All needed NPM packages are included in the package.json file.
 
-1. Modern laptop/desktop with a webcam.
-2. ShadowCam backend application.
-3. Internet connection to download PoseNet model.
+1. Node.js `^20.19.0` or `>=22.12.0` and npm.
+2. Modern laptop/desktop with a webcam.
+3. ShadowCam backend application.
+4. Internet connection to download PoseNet model.
 
 ## Built With
 [React](https://reactjs.org/)
@@ -57,4 +59,3 @@ https://shadowcam-back.herokuapp.com/
 [Daniel Waters](https://www.watersjournal.com)
 
 [Dan Rachou](https://github.com/danrachou)
-
