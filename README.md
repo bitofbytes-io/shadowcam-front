@@ -16,7 +16,7 @@ determine user's poses to record user's boxing workouts.  It requires the [backe
 1. Use Node.js `^20.19.0` or `>=22.12.0` with npm.
 2. Install the locked NPM packages using ``` npm ci ```.
 3. Run with ``` npm start ```.
-4. Create or preview a production build with ``` npm run build ``` or ``` npm run preview ```.
+4. Create a production build with ``` npm run build ```, then preview it with ``` npm run preview ```.
 
 ShadowCam backend application is required to be running for the 
 application to run successfully.  It uses the backend API application
